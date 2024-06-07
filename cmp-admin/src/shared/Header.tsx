@@ -1,10 +1,13 @@
 
+import { Link } from 'react-router-dom';
+
+
 function Header() {
 
     return (
         <>
             <nav className="navbar navbar-expand-xxl">
-                <a className="navbar-brand">CMP</a>
+                <Link to="Consultas" className="navbar-brand">CMP</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -14,19 +17,19 @@ function Header() {
                     </div>
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a href="Consultas.html" className="nav-link">Consultas</a>
+                            <Link to="Consultas" className="nav-link">Consultas</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="Grupos.html" className="nav-link">Grupos</a>
+                            <Link to="Grupos" className="nav-link">Grupos</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="Bailarinas.html" className="nav-link">Bailarinas</a>
+                            <Link to="Bailarinas" className="nav-link">Bailarinas</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="Pagos.html" className="nav-link active">Pagos</a>
+                            <Link to="Pagos" className="nav-link active">Pagos</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="Asistencias.html" className="nav-link">Asistencias</a>
+                            <Link to="Asistencias" className="nav-link">Asistencias</Link>
                         </li>
                     </ul>
                 </div>
