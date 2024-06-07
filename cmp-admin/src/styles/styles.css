@@ -208,7 +208,7 @@ nav .navbar-toggler:focus {
 }
 
 nav .navbar-toggler-icon {
-  background-image: url(../img/menu.svg);
+  background-image: url(../assets/menu.svg);
   background-size: auto;
   opacity: 1;
   --bs-btn-close-focus-opacity: 1;
@@ -218,13 +218,18 @@ nav .navbar-toggler-icon {
 }
 
 nav .btn-close {
-  background-image: url(../img/close.svg);
+  background-image: url(../assets/close.svg);
   background-size: auto;
   opacity: 1;
   --bs-btn-close-focus-opacity: 1;
   --bs-btn-close-disabled-opacity: 1;
   width: 28px;
   height: 28px;
+}
+
+nav .nav-link:hover:not(.active) {
+  color: var(--clr-secondary);
+  filter: brightness(1.15);
 }
 
 @media (width > 1350px) {

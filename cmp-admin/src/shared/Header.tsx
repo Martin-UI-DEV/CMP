@@ -1,6 +1,13 @@
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
+const navigation = [
+    {name:'Consultas', href: 'Consultas'},
+    {name:'Grupos', href: 'Grupos'},
+    {name:'Bailarinas', href: 'Bailarinas'},
+    {name:'Pagos', href: 'Pagos'},
+    {name:'Asistencias', href: 'Asistencias'}
+]
 
 function Header() {
 
@@ -16,21 +23,12 @@ function Header() {
                         <button className="btn-close" data-bs-dismiss="offcanvas"></button>
                     </div>
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link to="Consultas" className="nav-link">Consultas</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="Grupos" className="nav-link">Grupos</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="Bailarinas" className="nav-link">Bailarinas</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="Pagos" className="nav-link active">Pagos</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="Asistencias" className="nav-link">Asistencias</Link>
-                        </li>
+                        {navigation.map((item) => (
+                            <li className="nav-item" key={item.name} data-bs-dismiss="offcanvas">
+                                <NavLink to={item.href} className={({ isActive }) => { return 'nav-link ' + (isActive ? 'active' : '')}}>
+                                    {item.name}</NavLink>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </nav>
