@@ -10,7 +10,6 @@ const navigation = [
 ]
 
 function Header() {
-
     return (
         <>
             <nav className="navbar navbar-expand-xxl">
@@ -31,6 +30,7 @@ function Header() {
                         ))}
                     </ul>
                 </div>
+
             </nav>
         </>
     )
