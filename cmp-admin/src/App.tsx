@@ -13,11 +13,11 @@ function App() {
     <>
     <Header/>
       <Routes>
-        <Route path='Consultas' element={<Search />}></Route>
-        <Route path='Grupos' element={<Groups />}></Route>
-        <Route path='Bailarinas' element={<Dancers />}></Route>
-        <Route path='Pagos' element={<Payments />}></Route>
-        <Route path='Asistencias' element={<Attendance />}></Route>
+        <Route path='Consultas' Component={Search}></Route>
+        <Route path='Grupos' Component={Groups}></Route>
+        <Route path='Bailarinas' Component={Dancers}></Route>
+        <Route path='Pagos' Component={Payments}></Route>
+        <Route path='Asistencias' Component={Attendance}></Route>
       </Routes>
     </>
   )
